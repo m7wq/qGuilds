@@ -9,6 +9,7 @@ Commands :-
 /guild disband // cooldown of creating again
 /guild accept [name]
 /guild leave
+/guild chat [message]
 /guild promote [player] 
 /guild demote [player]
 /guild setrank [player] [role]
