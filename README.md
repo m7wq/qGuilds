@@ -1,6 +1,8 @@
 # qGuilds
 Cooking...
 
+FREE!
+
 ```
 Commands :-
 /guild create [Name] [Display_Name] [Tag]
