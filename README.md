@@ -10,6 +10,7 @@ Commands :-
 /guild accept [name]
 /guild leave
 /guild chat [message]
+/guild toggle [on|off]
 /guild promote [player] 
 /guild demote [player]
 /guild setrank [player] [role]
