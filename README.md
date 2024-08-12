@@ -8,6 +8,7 @@ Commands :-
 /guild create [Name] [Display_Name] [Tag]
 /guild disband // cooldown of creating again
 /guild accept [name]
+/guild ignore [name]
 /guild leave
 /guild chat [message]
 /guild toggle [on|off]
