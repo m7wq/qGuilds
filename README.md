@@ -22,6 +22,7 @@ Commands :-
 /guild mute [player]
 /guild unmute [player]
 /guild muteall
+/guild unmuteall
 /guild kick [player]
 /guild mypermissions
 ```
