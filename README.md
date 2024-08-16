@@ -23,7 +23,7 @@ Commands :-
 /guild toggle [on|off]
 /guild promote [player] 
 /guild demote [player]
-/guild setrank [player] [role]
+/guild setrole [player] [role]
 /guild settag [tag] // cooldown
 /guild settagcolor // cooldown
 /guild rename [name] [display_name] // coolodwn
