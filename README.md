@@ -2,7 +2,15 @@
 Cooking...
 
 FREE!
+```
 
+%qguilds_name%
+%qguilds_display_name%
+%qguilds_tag%
+%qguilds_role%
+%qguilds_display_role%
+
+```
 ```
 Commands :-
 /guild create [Name] [Display_Name] [Tag]
