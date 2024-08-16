@@ -15,6 +15,7 @@ FREE!
 Commands :-
 /guild create [Name] [Display_Name] [Tag]
 /guild disband // cooldown of creating again
+/guild invite [player]
 /guild accept [name]
 /guild ignore [name]
 /guild leave
