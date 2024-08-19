@@ -24,6 +24,7 @@ Commands :-
 /guild promote [player] 
 /guild demote [player]
 /guild setrole [player] [role]
+/guild transfer [player]
 /guild settag [tag] // cooldown
 /guild settagcolor // cooldown
 /guild rename [name] [display_name] // coolodwn
