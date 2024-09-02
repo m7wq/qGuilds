@@ -1,0 +1,10 @@
+name: qGuilds
+version: '${project.version}'
+main: dev.m7wq.qguilds.proxy.Plugin
+commands:
+  guilds:
+    aliases:
+      - g
+      - guild
+      - clan
+      - clans
