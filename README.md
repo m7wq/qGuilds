@@ -1,4 +1,6 @@
 # qGuilds [Under Development]
+
+MySQL + BungeeCord
 Cooking...
 
 FREE!
