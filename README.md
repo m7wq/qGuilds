@@ -33,8 +33,7 @@ Commands :-
 /guild list
 /guild mute [player]
 /guild unmute [player]
-/guild muteall
-/guild unmuteall
+/guild lockchat [on|off]
 /guild kick [player]
 /guild mypermissions
 ```
