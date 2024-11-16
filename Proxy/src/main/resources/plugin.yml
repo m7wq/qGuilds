@@ -1,0 +1,10 @@
+main: dev.m7wq.qguilds.PluginProxied
+name: qGuilds
+version: 1.0-SNAPSHOT
+commands:
+  guilds:
+    aliases:
+      - g
+      - guild
+      - clan
+      - clans
