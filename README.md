@@ -15,9 +15,6 @@ Guilds Plugin is a powerful and highly customizable plugin for managing guilds i
 - **Player List**: Display an interactive list of all guild members, showing their roles, online status, and other relevant information.
 - **Customizable Prefix & Colors**: Set a unique prefix for your guild's messages, and customize the color of the guild's tag for a personalized experience.
 
-### Spigot:
-  
-
 ### Configuration:
 - Guild roles and permissions can be easily configured in the `config.yml` file.
 - Customize tag colors, role permissions, and more through the configuration settings.
