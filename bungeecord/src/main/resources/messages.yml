@@ -1,0 +1,437 @@
+# =========================================
+#            qGuilds Plugin
+# =========================================
+# Author: m7wq
+# Description: Free customized guilds plugin
+# Open Source Plugin.
+# =========================================
+
+# ============ MAIN BUTTON UTILITIES ============
+
+# These are the button-related messages for user interactions such as confirming actions.
+confirm: "[CONFIRM]"  # Button for confirming actions (e.g., disbanding guild)
+
+under-cooldown: "%prefix% &cYou are currently in cooldown for %remaining%"  # Inform player about cooldown period
+
+join-message: "%prefix% &a&l+ %player%"  # Message when a player joins the server
+join-guild-message: "%prefix% &b%player% &7Has arrived at the guild!"  # Message when a player joins the guild
+leave-message: "%prefix% &c&l- %player%"  # Message when a player leaves the server
+not-in-your-guild: "%prefix% &cThis player isn't in your guild!"  # Error when trying to perform guild actions on a player who isn't in the guild
+
+# ============ MAIN BUTTON UTILITIES ============
+
+# ============ CHATTING ============
+
+# These are the messages related to chat, including errors for invalid text or muted players.
+long-name: "%prefix% The maximum number of characters for the name and the display name is 25 characters only."  # Error when player name exceeds character limit
+
+text-contain-special-character: "%prefix% &cThis text contains special characters, Please remove it."  # Error when player uses invalid characters
+
+cant-chat-because-muted: "%prefix% &cYou can't chat because you are muted"  # Message for muted players
+
+guild-message-format: "%prefix% %guild_name% %role% &a%player%: &f%message%"  # Format for guild messages
+
+not-in-guild-to-chat: "%prefix% &cYou cannot chat while you aren't in any guild!"  # Error for players not in a guild trying to chat
+
+# ============ CHATTING ============
+
+# ============ PLAYER MANAGEMENT ============
+
+# These messages are used for managing players, such as specifying a player or handling offline status.
+set-the-player: "%prefix% &cPlease set the player."  # Error when a player is not specified
+
+player-is-offline: "%prefix% &cThis player is offline."  # Error when trying to perform an action on an offline player
+
+# ============ PLAYER MANAGEMENT ============
+
+# ============ PERMISSIONS AND ERRORS ============
+
+too-long-name: "%prefix% Please do not exceed %int% characters."
+
+# These are the permission-related messages, alerting the player when they lack necessary permissions.
+no-permission: "%prefix% &cYou don't have enough permission for this action!"  # Error for insufficient permissions
+
+# ============ PERMISSIONS AND ERRORS ============
+
+# ============ GUILD CREATION ============
+
+# These messages are related to the creation of a guild, including success and error messages.
+failed-creating-guild:
+  - "%prefix% &ePlease provide all the required information"  # Error when not all required details for guild creation are provided
+  - "%prefix% &fEXAMPLE &7/guild create Name Display_Name tag/TAG"  # Example command to create a guild
+  - "%prefix% &eDisplay_name colorizable."  # Note about display name customization
+
+long-tag: "%prefix% &cPlease ensure your tag is exactly 3 characters long, like ABC."  # Error for invalid guild tag length
+
+successfully-created: "%prefix% &aYou have successfully created your guild."  # Success message after creating a guild
+
+name-already-exists: "%prefix% &cThis name already exists."
+
+already-in-guild:
+  - "%prefix% &cYou are already in a guild"  # Error for players already in a guild
+  - "%prefix% &eAre you sure you want to leave or disband it?"  # Prompt before leaving or disbanding
+  - "%prefix%                   %confirm%"  # Confirm action button for guild disbanding or leaving
+
+# ============ GUILD CREATION ============
+
+# ============ DISBANDING THE GUILD ============
+
+# These messages handle guild disbanding actions, including errors and confirmations.
+failed-disbanding:
+  - "%prefix% &cYou need only to use one argument"  # Error when more than one argument is used
+  - "%prefix% &7Just &e/guilds disband"  # Example command to disband a guild
+
+not-in-guild-to-disband: "%prefix% &cYou aren't in any guild to disband."  # Error for players who are not in a guild
+
+successfully-disbanded: "%prefix% &aYou have disbanded the guild successfully!"  # Success message after disbanding a guild
+
+# ============ DISBANDING THE GUILD ============
+
+# ============ LEAVING THE GUILD ============
+
+# These messages are for players trying to leave a guild, including restrictions for guild leaders.
+not-in-guild-to-leave: "%prefix% &cYou aren't in any guild to leave."  # Error when trying to leave without being in a guild
+
+you-are-the-master: "%prefix% &cYou can't do this because you are the master. You can just type /guild disband to remove the guild"  # Message for guild masters trying to leave
+
+you-left-the-guild: "%prefix% &aYou have successfully left the guild."  # Success message after leaving a guild
+
+# ============ LEAVING THE GUILD ============
+
+# ============ INVITING A PLAYER ============
+
+# These messages are used when inviting a player to the guild, including success, failure, and expired invites.
+already-in-your-guild: "%prefix% &cThis player is already in your guild."  # Error when trying to invite someone already in the guild
+
+cant-invite-yourself: "%prefix% &cYou can't send an invite for yourself."  # Error when trying to invite yourself
+
+invited-successfully:
+  - "%prefix% &aYou have invited %player% successfully!"  # Success message when inviting a player
+  - "%prefix% &eThe invite will be expired in %time% seconds."  # Time limit for the invite expiration
+
+expired-invite: "%prefix% &c%guild_display_name% invite has been expired."  # Error for expired invite
+
+already-invited: "%prefix% &cThis player has already been invited to your guild."  # Error when player has already been invited
+
+failed-inviting:
+  - "%prefix% &cYou have to set the player."  # Error when no player is specified
+  - "%prefix% &fEXAMPLE &7/guild invite player_name"  # Example of correct command
+
+invite-message:
+  - "%prefix% &e%inviter% &ahas invited you to %guild_name%"  # Message sent to a player who has been invited
+  - "%prefix% &eDo you want to accept the invitation or not?"  # Prompt for accepting or declining the invitation
+  - "%prefix% "
+  - "%prefix%         %yes%            %no%"  # Accept or decline buttons
+
+# ============ INVITING A PLAYER ============
+
+# ============ ACCEPTING & IGNORING INVITES ============
+
+# These messages handle the actions of accepting or ignoring guild invites.
+accepted-successfully: "%prefix% &aYou have successfully accepted the invite."  # Success message after accepting an invite
+
+failed-accepting:
+  - "%prefix% &cYou need to set all arguments"  # Error when arguments are missing for accepting an invite
+  - "%prefix% &fEXAMPLE: &7/guild accept guild_name"  # Example of accepting an invite
+
+failed-ignoring:
+  - "%prefix% &cYou need to set all arguments"  # Error when arguments are missing for ignoring an invite
+  - "%prefix% &fEXAMPLE: &7/guild ignore guild_name"  # Example of ignoring an invite
+
+ignored-invite: "%prefix% &a%player% &eIgnored your invitation."  # Message when a player ignores an invite
+
+ignored-successfully: "%prefix% &aYou have successfully ignored the invite."  # Success message when ignoring an invite
+
+no-invites-received: "%prefix% &cYou don't have any invites from this guild."  # Error when the player has no pending invites
+
+# ============ ACCEPTING & IGNORING INVITES ============
+
+
+# ============ TOGGLE CHAT ============
+
+# These messages are related to toggling the chat on and off.
+enter-valid-data:
+  - "%prefix% &cPlease enter a valid data"  # Error for invalid input
+  - "%prefix% &eSelect to disable or enable the chat toggle"  # Instruction for toggling chat
+  - "%prefix% &fEXAMPLE &7/guild toggle off|on"  # Example command for toggling chat
+
+already-on: "%prefix% &cYour chat toggle is already enabled."  # Error when trying to enable chat that is already on
+
+already-off: "%prefix% &cYour chat toggle is already disabled."  # Error when trying to disable chat that is already off
+
+enabled-toggle: "%prefix% &aYou have enabled toggle chat successfully!"  # Success message when toggling chat on
+disabled-toggle: "%prefix% &aYou have disabled toggle chat successfully!"  # Success message when toggling chat off
+
+# ============ TOGGLE CHAT ============
+
+# ============ PROMOTE & DEMOTE ============
+
+# These messages are used when promoting or demoting a player in the guild ranks.
+you-cant-promote: "%prefix% &cYou cannot promote a player to a higher or equal role."  # Error when trying to promote to a higher or equal rank
+
+he-is-on-higher-rank:
+  - "%prefix% &cThis player is already on the highest rank."  # Error when the player is already at a higher rank
+  - "%prefix% &eYou can transfer the ownership by doing &a/g transfer [player]"  # Suggestion to transfer guild ownership
+
+cant-promote-yourself: "%prefix% &cYou can't promote yourself."  # Error when trying to promote oneself
+
+player-promoted: "%prefix% %player% &aHas been promoted to %rank%"  # Success message when promoting a player
+
+you-cant-demote: "%prefix% &cYou can't demote a player who has the same role as you or a higher role."  # Error when trying to demote someone of equal or higher rank
+
+player-demoted: "%prefix% %player% &aHas been demoted to %rank%"  # Success message when demoting a player
+
+cant-demote-yourself: "%prefix% &cYou can't demote yourself."  # Error when trying to demote oneself
+
+you-cant-promote-higher-than-you: "%prefix% &cYou can't promote a player who has the same role as you or a higher role."  # Error when trying to promote a higher-ranked player
+
+you-cant-demote-anymore: "%prefix% &cThis player already has the lowest role."  # Error when trying to demote someone who is at the lowest role
+
+# ============ PROMOTE & DEMOTE ============
+
+# ============ SET ROLE ============
+
+# These messages handle setting a player's role in the guild.
+set-role-and-player: "%prefix% &cPlease set the role and the player."  # Error when role or player is not set
+
+theres-no-role: "%prefix% &cThis role you entered is not found."  # Error when the role does not exist
+
+role-is-set: "%prefix% &e%target%'s role has been set to %role%"  # Success message when setting a role
+
+cant-change-role: "%prefix% &cYou cannot change your own role."  # Error when trying to change your own role
+
+# ============ SET ROLE ============
+
+# ============ TRANSFER OWNERSHIP ============
+
+# These messages handle the transferring of guild ownership.
+transferred-successfully: "%prefix% &eOwnership &aHas been transferred successfully!"  # Success message when ownership is transferred
+
+you-are-now-owner: "%prefix% &a%guild%'s &eOwnership now transferred to you!"  # Success message for the new owner
+
+cant-transfer-to-yourself: "%prefix% &cYou can't transfer the ownership to yourself!"  # Error when trying to transfer ownership to oneself
+
+# ============ TRANSFER OWNERSHIP ============
+
+# ============ SET TAG ============
+
+# These messages are related to setting or changing the guild tag.
+long-or-short-tag: "%prefix% &cThe tag can only consist of three letters."  # Error when the tag is not three characters long
+
+please-set-the-tag:
+  - "%prefix% &cPlease enter the tag."  # Error when tag is not set
+  - "%prefix% &fEXAMPLE: &7/guild settag ABC"  # Example command for setting a tag
+
+changed-tag-successfully: "%prefix% &aThe tag has been changed successfully to %new_tag%"  # Success message when the tag is changed
+
+# ============ SET TAG ============
+
+# ============ SET TAG COLOR ============
+
+# These messages are for changing or setting the color of the guild tag.
+not-color-code: "%prefix% &cThis code you have entered cannot be converted to color."  # Error when an invalid color code is entered
+
+long-or-short-tag_color:
+  - "%prefix% &cThe tag color can only consist of two letters."  # Error for invalid tag color length
+  - "%prefix% &fCOLOR EXAMPLE: &7[?c] (replace ? with the color symbol)"  # Example of how to set tag color
+
+color-example: "%prefix% &fCOLOR EXAMPLE: &7[?c] (replace ? with the color symbol)"  # Example for setting color
+
+please-set-the-tag_color: "%prefix% &cPlease specify the tag color."  # Error when tag color is not specified
+
+changed-tag-color-successfully: "%prefix% &aThe tag color has been changed successfully to %new_tag_color%"  # Success message when tag color is changed
+
+# ============ SET TAG COLOR ============
+
+# ============ RENAME ============
+
+# These messages are related to renaming the guild.
+cant-rename:
+  - "%prefix% &cPlease specify the name and display name you want to change to."  # Error when name/display name is not provided
+  - "%prefix% &fEXAMPLE: &7/guild rename MyGuild &cMyGuild"  # Example command for renaming
+
+successfully-renamed: "%prefix% &aRenamed the guild successfully from %old_name% to %new_name%!"  # Success message when renaming the guild
+
+# ============ RENAME ============
+
+# ============ LIST ============
+
+# These messages are used for listing guild information and members.
+this-guild-is-not-exists: "%prefix% &cThis guild does not exist!"  # Error when the guild is not found
+
+this-is-not-allowed:
+  - "%prefix% &cSorry but this command isn't allowed for now."  # Error for forbidden command
+  - "%prefix% &7You can only use &e/guild list"  # Instruction to use the allowed command
+
+cant-send-list:
+  - "%prefix% &aUsages:"  # Instruction for listing command usage
+  - "&7/g list (To see your guild's players list)"  # Example of how to see your guild's players
+  - "&7/g list [guild] (To see tagged guild's players list)"  # Example of how to list another guild’s players
+
+you-arent-in-guild-to-see-list: "%prefix% &cYou aren't in any guild to see its list."  # Error when the player isn't in a guild
+
+online-player: "&a%player% ◉"  # Display format for online players
+offline-player: "&c%player% ◉"  # Display format for offline players
+
+# Separator between players in the list (example Ahmed, Yasser will become Ahmed - Yasser)
+between-every-player-in-the-list: "&7, "
+
+list-message:
+  - "%prefix% &m&8-------------------------"  # Section separator
+  - "%prefix% "
+  - "%prefix% &a%guild%'s Players List"  # Guild name in the list header
+  - "%prefix% "
+  - "%prefix% &aMASTER: %master%"  # Master player
+  - "%prefix% "
+  - "%prefix% &aADMINS: %admins%"  # Admins list
+  - "%prefix% "
+  - "%prefix% &aMODERATORS: %moderators%"  # Moderators list
+  - "%prefix% "
+  - "%prefix% &aSPECIALS: %specials%"  # Special rank members
+  - "%prefix% "
+  - "%prefix% &aMEMBERS: %members%"  # Regular members list
+  - "%prefix% "
+  - "%prefix% &aOnline Players: &2%online_players%"  # Online players count
+  - "%prefix% &aOffline Players: &c%offline_players%"  # Offline players count
+  - "%prefix% &aTotal Players: &e%total_players%"  # Total players count
+  - "%prefix% "
+  - "%prefix% &m&8-------------------------"  # Section separator
+
+# ============ LIST ============
+
+# ============ MUTE ============
+
+# These messages handle muting players in the guild.
+already-muted: "%prefix% &cThis player is already muted."  # Error when player is already muted
+successfully-muted: "%prefix% &aThe player has been muted successfully."  # Success when muting a player
+cant-mute-higher-than-you: "%prefix% &cYou can't mute someone who has a higher rank than you."  # Error when trying to mute a higher-ranked player
+cant-mute-your-self: "%prefix% &cYou can't mute yourself."  # Error when trying to mute yourself
+you-have-been-muted: "%prefix% &eYou have been muted from your guild!"  # Notification when a player is muted
+
+# ============ MUTE ============
+
+# ============ UNMUTED ============
+
+# These messages handle unmuting players in the guild.
+not-muted: "%prefix% &cThis player is not muted."  # Error when trying to unmute a player who isn't muted
+successfully-unmuted: "%prefix% &aThe player has been unmuted successfully."  # Success when unmuting a player
+cant-unmute-higher-than-you: "%prefix% &cYou cannot unmute someone who has a higher rank than you."  # Error when trying to unmute a higher-ranked player
+you-cant-unmute-your-self: "%prefix% &cYou cannot unmute yourself."  # Error when trying to unmute yourself
+you-have-been-unmuted: "%prefix% &eYou have been unmuted from your guild!"  # Notification when a player is unmuted
+
+# ============ UNMUTED ============
+
+# ============ KICK ============
+
+# These messages are related to kicking players from the guild.
+kicked-successfully: "%prefix% &aThis player has been kicked successfully!"  # Success message when a player is kicked
+you-have-been-kicked: "%prefix% &eYou have been kicked from your guild!"  # Notification when a player is kicked
+
+# ============ KICK ============
+
+# ============ MY PERMISSIONS ============
+
+# Marks
+permission:
+  have: "&a✔"
+  doesnt-have: "&c✗"
+
+# This section provides information about the player's permissions within the guild.
+permissions-message:
+  - "%prefix% &8&m-------------------------"
+  - "%prefix% "
+  - "%prefix% &aYour Permissions: "  # Title for the permissions list
+  - "%prefix% "
+  - "%prefix% &7&l‣ &eInvite: %invite%"  # Permission for inviting players
+  - "%prefix% &7&l‣ &eMute: %mute%"  # Permission for muting players
+  - "%prefix% &7&l‣ &eUnMute: %unmute%"  # Permission for unmuting players
+  - "%prefix% &7&l‣ &eKick: %kick%"  # Permission for kicking players
+  - "%prefix% &7&l‣ &ePromote: %promote%"  # Permission for promoting players
+  - "%prefix% &7&l‣ &eDemote: %demote%"  # Permission for demoting players
+  - "%prefix% &7&l‣ &eSet Tag: %set-tag%"  # Permission for setting the guild tag
+  - "%prefix% &7&l‣ &eSet Tag Color: %set-tag-color%"  # Permission for setting the guild tag color
+  - "%prefix% &7&l‣ &eRename: %rename%"  # Permission for renaming the guild
+  - "%prefix% &7&l‣ &eEdit Roles: %editRoles%"  # Permission for edit roles in the guild
+  - "%prefix% "
+  - "%prefix% &8&m-------------------------"
+
+# ============ MY PERMISSIONS ============
+
+# =========== EDIT ROLES ============
+
+# buttons
+createRole: "&e‹CREATE›"
+renameRole: "&a‹RENAME›"
+recolorRole: "&b‹RECOLOR›"
+permissionEditor: "&5‹PERMISSIONS›"
+deleteRole: "&c‹REMOVE›"
+arrows:
+  upgrade: "&a▲"
+  degrade: "&c▼"
+
+# lines
+emptyLine: "&8┊ "
+created-role: "&8┃ %arrows% %role% &8&l- %rename% %recolor% %permissions% %remove%"
+default-role: "&8┃ %role% &8&l- %rename% %recolor% %permissions%"
+
+# full message
+roles-list:
+  - "%prefix% &8&m--------------- %guild% Roles ---------------"
+  - "{handleLines}"
+  - "%prefix% &8&m--------------- %guild% Roles ---------------"
+
+# =========== EDIT ROLES ============
+
+# ============ HELP ============
+
+# These messages provide the list of available commands for the guild system.
+create: "&e/guild create [Name] [Display_Name] [Tag] &7Create a guild"  # Command to create a guild
+disband: "&e/guild disband &7Disband your guild"  # Command to disband the guild
+invite: "&e/guild invite [Player] &7Invite player to your guild"  # Command to invite a player
+accept: "&e/guild accept [Name] &7Accept guild request"  # Command to accept a guild request
+ignore: "&e/guild ignore [Name] &7Ignore guild request"  # Command to ignore a guild request
+leave: "&e/guild leave &7Leave your guild"  # Command to leave the guild
+chat: "&e/guild chat [Message] &7Send a message to your guild's chat"  # Command to send a message to guild chat
+toggle: "&e/guild toggle [on|off] &7Enable or disable chat toggle"  # Command to toggle chat on/off
+promote: "&e/guild promote [Player] &7Promote a player within your guild"  # Command to promote a player
+demote: "&e/guild demote [Player] &7Demote a player within your guild"  # Command to demote a player
+setrole: "&e/guild setrole [Player] [Role] &7Set the player role"  # Command to set a player's role
+transfer: "&e/guild transfer [Player] &7Transfer the OwnerShip of your guild"  # Command to transfer guild ownership
+settag: "&e/guild settag [Tag] &7Set your guild's tag"  # Command to set the guild tag
+settagcolor: "&e/guild settagcolor [Tag_Color] &7Set your guild's tag color"  # Command to set the guild tag color
+rename: "&e/guild rename [Name] [Display_Name] &7Rename your guild"  # Command to rename the guild
+list: "&e/guild list [Guild] &7List of all players and information in the guild"  # Command to list players in a guild
+mute: "&e/guild mute [Player] &7Mute a player within your guild"  # Command to mute a player
+unmute: "&e/guild unmute [Player] &7UnMute a player within your guild"  # Command to unmute a player
+kick: "&e/guild [Player] &7Kick a player from your guild"  # Command to kick a player
+mypermissions: "&e/guild mypermissions &7List of permissions you have and do not have"  # Command to view player permissions
+help: "&e/guild help &7List of all the available commands"  # Command to show help
+
+help-message:
+  - "%prefix% &m&8---------------&eHELP&8&m---------------"  # Header for help section
+  - "%prefix% "
+  - "%prefix% %create%"  # Create command help
+  - "%prefix% %disband%"  # Disband command help
+  - "%prefix% %invite%"  # Invite command help
+  - "%prefix% %accept%"  # Accept command help
+  - "%prefix% %ignore%"  # Ignore command help
+  - "%prefix% %leave%"  # Leave command help
+  - "%prefix% %chat%"  # Chat command help
+  - "%prefix% %toggle%"  # Toggle command help
+  - "%prefix% %promote%"  # Promote command help
+  - "%prefix% %demote%"  # Demote command help
+  - "%prefix% %setrole%"  # Set role command help
+  - "%prefix% %transfer%"  # Transfer command help
+  - "%prefix% %settag%"  # Set tag command help
+  - "%prefix% %settagcolor%"  # Set tag color command help
+  - "%prefix% %rename%"  # Rename command help
+  - "%prefix% %list%"  # List command help
+  - "%prefix% %mute%"  # Mute command help
+  - "%prefix% %unmute%"  # Unmute command help
+  - "%prefix% %kick%"  # Kick command help
+  - "%prefix% %mypermissions%"  # My permissions command help
+  - "%prefix% %help%"  # Help command help
+  - "%prefix% "
+  - "%prefix% &m&8---------------&eHELP&8&m---------------"  # Footer for help section
+
+# ============ HELP ============

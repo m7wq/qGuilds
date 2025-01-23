@@ -1,0 +1,12 @@
+name: qGuilds-BungeeCord
+version: '${project.version}'
+api-version: '1.13'
+main: dev.m7wq.qguilds.Plugin
+author: m7wq
+commands:
+  guild:
+    aliases:
+      - g
+      - guilds
+      - clan
+      - clans

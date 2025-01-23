@@ -1,0 +1,4 @@
+name: qGuilds-Spigot
+version: '1.0'
+main: org.m7wq.qGuilds_Spigot.Plugin
+authors: [ m7wq ]

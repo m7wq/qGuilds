@@ -1,0 +1,97 @@
+# =========================================
+#            qGuilds Plugin
+# =========================================
+# Author: m7wq
+# Description: Free customized guilds plugin
+# Open Source Plugin.
+# =========================================
+
+# ============ DATABASE ============
+
+# Database connection settings for the application.
+DATABASE:
+  driver: "jdbc:mysql://"  # JDBC driver for the database connection
+  host: "127.0.0.1"  # Database host (localhost in this case)
+  port: 3306  # Database port
+  username: "username"  # Username to access the database
+  password: "password"  # Password to access the database
+  database: "database"  # Database name
+  databaseProperties: "?useSSL=false&serverTimezone=UTC"  # Database properties for connection
+  maximumPoolSize: 10  # Maximum number of database connections in the pool
+
+# ============ DATABASE ============
+
+# ============ ROLES ============
+
+# List of guild roles. Ensure that roles are in uppercase.
+# Current roles are MASTER, ADMIN, MODERATOR, SPECIAL, MEMBER
+# Will make these configurable & changeable soon!
+
+# ============ ROLES ============
+
+# ============ COOLDOWNS ============
+
+# Define cooldowns for various actions in days or hours.
+cooldowns:
+  settag: 2  # Days
+  rename: 7  # Days
+  create: 5  # Days
+  settagcolor: 12  # Hours
+
+# ============ COOLDOWNS ============
+
+# ============ PERMISSIONS ============
+
+# Permissions that control who can perform certain actions in the guild system.
+permissions:
+  can-invite:
+    - MASTER
+    - ADMIN
+    - MODERATOR
+  can-mute:
+    - MASTER
+    - ADMIN
+  can-unmute:
+    - MASTER
+    - ADMIN
+    - MODERATOR
+  can-kick:
+    - MASTER
+    - ADMIN
+  can-promote:
+    - MASTER
+    - ADMIN
+  can-demote:
+    - MASTER
+    - ADMIN
+  can-setTag:
+    - MASTER
+    - ADMIN
+  can-setTagColor:
+    - MASTER
+    - ADMIN
+  can-rename:
+    - MASTER
+    - ADMIN
+  allow-to-see-list-of-other-guilds: true  # Allow players to see other guilds' lists
+
+# ============ PERMISSIONS ============
+
+# ============ GAME OPTIONS ============
+
+# Game-related configuration options.
+options:
+  expire-time: 30  # Time in seconds before an invitation request expires
+  prefix: "&3&lGUILDS &8〢"  # Prefix for messages
+  role-after-transfer: ADMIN  # Role assigned to the previous owner after transferring guild ownership
+
+# ============ GAME OPTIONS ============
+
+# ============ TAG CONFIGURATION ============
+
+# Configuration for guild tags.
+tag:
+  format: "%color%[%tag%]"  # Format for the guild tag (with color support)
+  default-tag-color: "&f"  # Default color for the guild tag when the guild is created
+
+# ============ TAG CONFIGURATION ============
